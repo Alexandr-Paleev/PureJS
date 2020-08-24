@@ -1,2 +1,0 @@
-# PureJS
-create excel application
