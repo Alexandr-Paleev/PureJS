@@ -6,7 +6,11 @@ export class Excel {
 
     getRoot() {
         const $root = document.createElement('div')
-        $root.textContent = 'TEST'
+
+        this.components.forEach(Component => {
+            const component = new Component()
+            $root.insertAdjacentHTML('beforeend', component.toHTML())
+        })
 
         return $root
     }
